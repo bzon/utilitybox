@@ -10,7 +10,8 @@ ARG vegeta_version=12.2.0
 RUN curl -fsSL -o vegeta.tar.gz "https://github.com/tsenart/vegeta/releases/download/cli%2Fv${vegeta_version}/vegeta-${vegeta_version}-linux-amd64.tar.gz" && \
       tar -zxvf vegeta.tar.gz && \
       mv vegeta /usr/local/bin/vegeta && \
-      chmod +x /usr/local/bin/vegeta
+      chmod +x /usr/local/bin/vegeta && \
+      rm -f vegeta.tar.gz
 
 CMD ["sh", "/usr/local/bin/sleeper"]
 

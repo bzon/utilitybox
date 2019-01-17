@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk --update add git curl bind-tools net-tools wget openssh
+RUN apk --update add git curl bind-tools net-tools wget openssh vim
 
 RUN echo "while true; do echo sleeping..; sleep 86400; done" > /usr/local/bin/sleeper && \
       chmod +x /usr/local/bin/sleeper
